@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="bootstrap/css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+  <title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+     <nav class="navbar navbar-light header">
+        <div class="d-flex p-2"><h1>Student Survey Form</h1></div>
+    </nav>
+    <form>
+    <div class="container bg-back">
+        <div class="row mx-auto">
+            <div class="col">
+                <div class="form-group mg-top-15">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="firstName" name="firstName" placeholder="First Name" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="col-md-8 inputGroupContainer">
+                           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="lastName" name="lastName" placeholder="Last Name" class="form-control" required="true" value="" type="text"></div>
+                       </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Street Address</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="streetAddress" name="streetAddress" placeholder="Street Address" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">City</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="city" name="city" placeholder="City" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">State</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="state" name="state" placeholder="State" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Postal Code/ZIP</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span><input id="postcode" name="postcode" placeholder="Postal Code/ZIP" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span><input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone Number</label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span><input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="form-control" required="true" value="" type="text"></div>
+                        </div>
+                    </div>
+                    
+                    
+            </div>
+            <div class="col">
+                <div class="form-group mg-top-15">
+                    <label class="col-md-4 control-label">Date of survey</label>
+                    <div class="col-md-8 inputGroupContainer">              
+                        <input class="form-control" type="date" value="2019-09-20" id="dateOfSurvey">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-06 control-label"> What do you like most about the campus?</label>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="checkbox"> Student
+                        </div>
+                    </div>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input " type="checkbox"> Location
+                        </div>
+                    </div>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input " type="checkbox"> campus
+                        </div>
+                    </div>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input " type="checkbox"> Atmosphere
+                        </div>
+                    </div>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input " type="checkbox"> Dorm Rooms
+                        </div>
+                    </div>
+                    <div class="row cl-blue">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input " type="checkbox"> Sports
+                        </div>
+                    </div>
+                </div>
+
+                <label class="col-md-06 control-label"> What do you like most about the campus?</label>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Friends
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Television
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Default radio
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Internet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5 d-flex justify-content-right">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Would you recoment this school to others</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="1">Very Likely</option>
+                        <option value="2">Likely</option>
+                        <option value="3">Unlikely</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-06 control-label">Raffle: Enter at least ten comma separated numbers ranging from 1 through 100</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="raffle" name="raffle" placeholder="Enter 10 comma separated" class="form-control" onChange="checkRaffle(this.value);" required="true" value="" type="text"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Additional Comments</label>
+                    <textarea class="form-control" id="additionalComments" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-submit">
+        <div class="row mx-auto">
+            <div class="col">
+                <div class="form-group mg-top-15">
+                    <button type="Submit" class="btn btn-primary ">Submit</button>
+                    <button type="reset" value="reset" class="btn btn-light ">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    <script type="text/javascript">
+        function checkRaffle(data) {
+            var raffleDigits = data.split(',');
+            for(var i = 0; i < raffleDigits.length; i++ ){
+                if(parseInt(raffleDigits[i]) > 100 || parseInt(raffleDigits[i]) < 1){
+                    alert("raffle values are incorect");
+                }
+            }
+
+        };
+    </script>
+</body>
+</html>

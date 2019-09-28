@@ -1,0 +1,36 @@
+h1 {
+	color: blue;
+}
+
+.mg-top-15 {
+	margin-top: 15px;
+}
+
+.header {
+	background-color: #e3f2fd;
+	border-width: 5px;
+	border-color: #0270f7;
+	border-style: solid;
+}
+
+.bg-back {
+	background-color: #dee2e6;
+	border-top:    5px solid #748493;
+	border-right:  5px solid #748493;
+	border-left:   5px solid #748493;
+}
+
+.bg-submit {
+	background-color: #dee2e6;
+	border-bottom:    5px solid #748493;
+	border-right:  5px solid #748493;
+	border-left:   5px solid #748493;
+}
+
+label {
+	color: #50A0CF;
+}
+
+.cl-blue {
+	color: #50A0CF;
+}
