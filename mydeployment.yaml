@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: java-controller
+  name: java-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: java-controller
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: java-controller
+    spec:
+      containers:
+      - image: praveenmenon/swe-645:9.0
+        name: java-controller
+        ports:
+        - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /student-service
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+        resources: {}
+status: {}
