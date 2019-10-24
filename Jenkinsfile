@@ -15,12 +15,12 @@ node{
   
   //Stage 1 : Build the docker image.
   stage('Build image') {
-    sh("sudo docker build -t ${imageTag} .")
+    sh("sudo chown root:jenkins docker build -t ${imageTag} .")
   }
   
   //Stage 2 : Push the image to docker registry
   stage('Push image to registry') {
-    sh("sudo docker push ${dockerUser}/${imageTag}")
+    sh("sudo chown root:jenkins docker push ${dockerUser}/${imageTag}")
   }
   
   //Stage 3 : Deploy Application
