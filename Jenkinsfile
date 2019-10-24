@@ -6,7 +6,7 @@ node{
   def serviceName = "${appName}-backend"  
   def imageVersion = '9.0'
   def namespace = 'development'
-  def imageTag = "${appName}:${imageVersion}"
+  def imageTag = "${appName}:${imageVersion}.${env.BUILD_NUMBER}"
   def dockerUser = 'praveenmenon'
   def loadBalancer = 'java-controller'
   
