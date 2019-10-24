@@ -15,12 +15,12 @@ node{
   
   //Stage 1 : Build the docker image.
   stage('Build image') {
-    sh("docker build -t ${imageTag} .")
+    sh("sudo docker build -t ${imageTag} .")
   }
   
   //Stage 2 : Push the image to docker registry
   stage('Push image to registry') {
-    sh("docker push ${dockerUser}/${imageTag}")
+    sh("sudo docker push ${dockerUser}/${imageTag}")
   }
   
   //Stage 3 : Deploy Application
