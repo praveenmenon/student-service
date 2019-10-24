@@ -9,10 +9,14 @@ node{
   def imageTag = "${appName}"
   def dockerUser = 'praveenmenon'
   def loadBalancer = 'java-controller'
+  def dockerId = 'praveenmenon'
+  def dockerPass = 'Rainbow9'
   
   //Checkout Code from Git
   checkout scm
-  
+  stage('Login to docker'){
+    sh("docker login -u ${dockerId} -p ${dockerPass} docker.io")
+  }
   //Stage 1 : Build the docker image.
   stage('Build image') {
     sh("docker build -t ${imageTag} .")
