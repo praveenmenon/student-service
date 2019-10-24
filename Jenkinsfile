@@ -4,7 +4,7 @@ node{
   def project = 'student-service'
   def appName = 'swe-645'
   def serviceName = "${appName}-backend"  
-  def imageVersion = '9:0'
+  def imageVersion = '9.0'
   def namespace = 'development'
   def imageTag = "${appName}:${imageVersion}"
   def dockerUser = 'praveenmenon'
