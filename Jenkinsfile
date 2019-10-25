@@ -6,7 +6,7 @@ node{
   def serviceName = "${appName}-backend"  
   def imageVersion = "${env.BUILD_NUMBER}"
   def namespace = 'development'
-  def imageTag = "${appName}"
+  def imageTag = "${appName}:${imageVersion}"
   def dockerUser = 'praveenmenon'
   def loadBalancer = 'java-controller'
   def dockerId = 'praveenmenon'
@@ -33,10 +33,12 @@ node{
         //Roll out to Dev Environment
         case "development":
         //Create or update resources
-        sh("kubectl apply -f aws-eks-cluster.yaml")
-        sh("kubectl apply -f mydeployment.yaml")
-        //Grab the external Ip address of the service
-        sh("echo http://`kubectl get service/${loadBalancer} --output=json | jq -r '.status.loadBalancer.ingress[0].hostname'` > ${feSvcName}")
+        withKubeConfig([credentialsId: 'praveenmenon', serverUrl: 'arn:aws:iam::144763098142:role/javacluster-worker-nodes-NodeInstanceRole-1QNWRZYSKGE4H']){
+          sh("kubectl apply -f aws-eks-cluster.yaml")
+          sh("kubectl apply -f mydeployment.yaml")
+          //Grab the external Ip address of the service
+          sh("echo http://`kubectl get service/${loadBalancer} --output=json | jq -r '.status.loadBalancer.ingress[0].hostname'` > ${feSvcName}")
+        }
         break
 
         default:
