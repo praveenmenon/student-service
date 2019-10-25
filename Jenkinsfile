@@ -24,7 +24,7 @@ node{
   
   //Stage 2 : Push the image to docker registry
   stage('Push image to registry') {
-    sh("docker push ${imageTag}")
+    sh("docker push ${dockerUser}/${appName}")
   }
   
   //Stage 3 : Deploy Application
