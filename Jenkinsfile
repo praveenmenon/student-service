@@ -33,7 +33,7 @@ node{
         //Roll out to Dev Environment
         case "development":
         //Create or update resources
-        withKubeConfig([credentialsId: 'praveenmenon', serverUrl: 'arn:aws:iam::144763098142:role/javacluster-worker-nodes-NodeInstanceRole-1QNWRZYSKGE4H']){
+        withKubeConfig([credentialsId: 'arn:aws:iam::144763098142:role/swe_eks_role', serverUrl: 'arn:aws:iam::144763098142:role/javacluster-worker-nodes-NodeInstanceRole-1QNWRZYSKGE4H']){
           sh("kubectl apply -f aws-eks-cluster.yaml")
           sh("kubectl apply -f mydeployment.yaml")
           //Grab the external Ip address of the service
