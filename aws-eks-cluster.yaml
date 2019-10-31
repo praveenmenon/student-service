@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: aws-auth
-  namespace: kube-system
+	name: aws-auth
+	namespace: kube-system
 data:
-  mapRoles: |
-    - rolearn:  arn:aws:iam::144763098142:role/javacluster-worker-nodes-NodeInstanceRole-1QNWRZYSKGE4H
-      username: system:node:{{EC2PrivateDNSName}}
-      groups:
-        - system:bootstrappers
-        - system:nodes
+	mapRoles: |
+		- rolearn:  arn:aws:iam::144763098142:role/javacluster-worker-nodes-NodeInstanceRole-1QNWRZYSKGE4H
+			username: system:node:{{EC2PrivateDNSName}}
+			groups:
+				- system:bootstrappers
+				- system:nodes
