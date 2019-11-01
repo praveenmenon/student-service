@@ -16,11 +16,9 @@ node{
   checkout scm
 
   stage ('STAGE NAME') {
-    withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
-      sh '//code block'
-    }
+    sh("echo export PATH=$HOME/bin:$PATH")
   }
-  
+
   stage('Login to docker'){
     sh("docker login -u ${dockerId} -p ${dockerPass} docker.io")
   }
