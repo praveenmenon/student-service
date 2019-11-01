@@ -16,7 +16,7 @@ node{
   checkout scm
 
   stage ('STAGE NAME') {
-    sh("echo export PATH=$HOME/bin:$PATH")
+    sh("export PATH=$HOME/bin:$PATH")
   }
 
   stage('Login to docker'){
