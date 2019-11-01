@@ -14,6 +14,13 @@ node{
   
   //Checkout Code from Git
   checkout scm
+
+  stage ('STAGE NAME') {
+    withEnv(['PATH+EXTRA=/usr/sbin:/usr/bin:/sbin:/bin']) {
+      sh '//code block'
+    }
+  }
+  
   stage('Login to docker'){
     sh("docker login -u ${dockerId} -p ${dockerPass} docker.io")
   }
