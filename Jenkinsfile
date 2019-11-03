@@ -39,7 +39,7 @@ node{
     environment{
       PATH="$HOME/bin"
     }
-    echo "PATH = ${PATH}"
+    echo "HOME = ${HOME}"
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
