@@ -26,13 +26,18 @@ node{
   stage('Build image') {
     sh("docker build -t ${imageTag} .")
   }
-  
-  //Stage 2 : Push the image to docker registry
-  stage('Push image to registry') {
-    sh("docker push ${dockerUser}/${appName}")
+
+  //Stage 2 : Tag the docker image.
+  stage('Tag image') {
+    sh("docker tag ${imageTag} ${dockerUser}/${imageTag}")
   }
   
-  //Stage 3 : Deploy Application
+  //Stage 3 : Push the image to docker registry
+  stage('Push image to registry') {
+    sh("docker push ${dockerUser}/${imageTag}")
+  }
+  
+  //Stage 4 : Deploy Application
   stage('Deploy Application') {
     switch (namespace) {
         //Roll out to Dev Environment
