@@ -40,7 +40,7 @@ node{
         case "development":
           //Create or update resources
           // sh("kubectl apply -f aws-eks-cluster.yaml")
-          sh("echo cat mydeployment.yaml")
+          sh("cat mydeployment.yaml")
           // sh("echo kubectl apply -f mydeployment.yaml")
           //Grab the external Ip address of the service
           sh("echo http://`kubectl get service/${loadBalancer} --output=json | jq -r '.status.loadBalancer.ingress[0].hostname'`")
