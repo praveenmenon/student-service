@@ -39,9 +39,7 @@ node{
   
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
-    steps {
-      echo "PATH is: $PATH"
-    }
+    echo "PATH is: ${env.PATH}"
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
