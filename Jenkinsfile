@@ -37,12 +37,9 @@ node{
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
     environment{
-      JENKINS_PATH="$HOME/bin"
+      PATH="$HOME/bin"
     }
-    echo "Hello world"
-    echo "PATH=${JENKINS_PATH}"
-    sh 'echo "JP=$JENKINS_PATH"'
-    echo "PATH is: $Path"
+    echo "PATH = ${PATH}"
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
