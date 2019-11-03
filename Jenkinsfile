@@ -34,7 +34,7 @@ node{
   }
 
   environment{
-    PATH="$HOME/bin:$PATH"
+    Path="$HOME/bin:$PATH"
   }
   
   //Stage 4 : Deploy Application
