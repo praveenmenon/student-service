@@ -32,15 +32,21 @@ node{
   stage('Push image to registry') {
     sh("docker push ${dockerUser}/${imageTag}")
   }
+
+  environment{
+    PATH="$HOME/bin:$PATH"
+  }
   
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
+    steps {
+      echo "PATH is: $PATH"
+    }
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
           //Create or update resources
           // sh("kubectl apply -f aws-eks-cluster.yaml")
-          sh("cat mydeployment.yaml")
           // sh("echo kubectl apply -f mydeployment.yaml")
           //Grab the external Ip address of the service
           sh("echo http://`kubectl get service/${loadBalancer} --output=json | jq -r '.status.loadBalancer.ingress[0].hostname'`")
