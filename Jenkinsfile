@@ -37,9 +37,10 @@ node{
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
     environment{
-      PATH="$HOME/bin"
+      sh("echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc")
     }
-    echo "HOME = ${HOME}"
+    echo "PATH = ${PATH}"
+    echo "Path = ${Path}"
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
