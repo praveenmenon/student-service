@@ -33,12 +33,17 @@ node{
     sh("docker push ${dockerUser}/${imageTag}")
   }
 
-  environment{
-    Path="$HOME/bin:$PATH"
-  }
   
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
+    environment{
+      JENKINS_PATH="$HOME/bin"
+    }
+    steps {
+      echo "Hello world"
+      echo "PATH=${JENKINS_PATH}"
+      sh 'echo "JP=$JENKINS_PATH"'
+    }
     echo "PATH is: $Path"
     switch (namespace) {
         //Roll out to Dev Environment
