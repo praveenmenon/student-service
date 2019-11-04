@@ -18,7 +18,7 @@ spec:
         run: java-controller
     spec:
       containers:
-      - image: praveenmenon/swe-645:${env.BUILD_NUMBER}
+      - image: praveenmenon/swe-645:74
         name: java-controller
         ports:
         - containerPort: 8080

@@ -36,17 +36,12 @@ node{
   
   //Stage 4 : Deploy Application
   stage('Deploy Application') {
-    environment{
-      sh("echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc")
-    }
-    echo "PATH = ${PATH}"
-    echo "Path = ${Path}"
     switch (namespace) {
         //Roll out to Dev Environment
         case "development":
           //Create or update resources
           // sh("kubectl apply -f aws-eks-cluster.yaml")
-          // sh("cd ${HOME}/bin && echo kubectl apply -f mydeployment.yaml")
+          sh("cd ${HOME}/bin && echo kubectl apply -f mydeployment.yaml")
           //Grab the external Ip address of the service
           sh("cd ${HOME}/bin && echo http://`kubectl get service/${loadBalancer} --output=json | jq -r '.status.loadBalancer.ingress[0].hostname'`")
         break
